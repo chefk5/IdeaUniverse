@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="indx.css">
+  <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+  
+  <script type="text/javascript">
+    $(function() {
+
+      $('#login-form-link').click(function(e) {
+        $("#login-form").delay(100).fadeIn(100);
+        $("#register-form").fadeOut(100);
+        $('#register-form-link').removeClass('active');
+        $(this).addClass('active');
+        e.preventDefault();
+      });
+      $('#register-form-link').click(function(e) {
+        $("#register-form").delay(100).fadeIn(100);
+        $("#login-form").fadeOut(100);
+        $('#login-form-link').removeClass('active');
+        $(this).addClass('active');
+        e.preventDefault();
+      });
+
+    });
+
+  </script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Idea Hub</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right col-xl-pull-6">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+      </ul>
+      <form class="navbar-form navbar-right col-xl-pull-6" style="margin-right: 30%;" role="search">
+        <div class="form-group input-group">
+          <input type="text" class="form-control" placeholder="Search..">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="jumbotron pg1">
+<div class="container">
+	<div class="row">
+	font-family: 'Architects Daughter', cursive;
+
+		<div class="col-lg-5  " style="margin-top: 10%;">
+		<h1 style="font-family: 'Architects Daughter', cursive; color: white;">
+			IDEA UNIVERSE<br>
+		</h1>
+		
+		<h2 style="font-family: 'Oxygen', sans-serif; color: white;">
+			Get inspired and inspire other great ideas!
+		</h2>
+		<h3 style="font-family: 'Oxygen', sans-serif; color: white;">
+			Idea Universe is a community to find aspiring ideas whether it is for you school project or your next business.
+		</h3>
+
+		</div>
+		<div class="col-lg-5 col-lg-offset-2  " style="margin-top: 20%;">
+		<h2 style="font-family: 'Oxygen', sans-serif; color: white;">
+			Get inspired and inspire other great ideas!<br>
+		</h2>
+		<h3 style="font-family: 'Oxygen', sans-serif; color: white;">
+			Idea Universe is a community to find aspiring ideas<br> whether it is for you school project or your next business.
+		</h3>
+
+		</div>
+			
+		</div>
+	
+
+		
+	</div>
+	
+</div>
+    
+  </div>
+
+  
+</div>
+
+
+<div class="pg2">
+<div class="k" id="k">
+ <div class="container signinBox" >
+      <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-login">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <a href="#" class="active" id="login-form-link">Login</a>
+              </div>
+              <div class="col-xs-6">
+                <a href="#" id="register-form-link">Register</a>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-12">
+                <form id="login-form" action="signin-user.php" method="post" role="form" style="display: block;">
+                  <div class="form-group">
+                    <input type="email" name="user-email-login" id="user-email-login" tabindex="1" class="form-control" placeholder="E-mail" value="">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="user-password-login" id="user-password-login" tabindex="2" class="form-control" placeholder="Password">
+                  </div>
+                  <div class="form-group text-center">
+                    <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                    <label for="remember"> Remember Me</label>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3">
+                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="text-center">
+                          <a href="#" tabindex="5" class="forgot-password">Forgot Password?</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <form id="register-form" action="signUp.php" method="POST" role="form" style="display: none;">
+                  <div class="form-group">
+                    <input type="text" name="user-name-signup" id="user-name-signup" tabindex="1" class="form-control" placeholder="Username" value="">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="user-email-signup" id="user-email-signup" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="user-password-signup" id="user-password-signup" tabindex="2" class="form-control" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3">
+                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ </div>
+</div>
+
+
+
+
+
+</body>
+</html>
